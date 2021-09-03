@@ -42,7 +42,7 @@ jobs:
 
       
       - name: Deploy to Surge
-        run: surge ./build firstreactapp.surge.su ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build firstreactapp.surge.sh --token ${{ secrets.SURGE_TOKEN }}
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
