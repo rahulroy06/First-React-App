@@ -28,7 +28,7 @@ jobs:
       - name: Intall NodeJS
         uses: actions/setup-node@v2-beta
         with:
-            node-version: 12
+            node-version: 14
             
       - uses: borales/actions-yarn@v2.3.0
         with:
@@ -41,7 +41,7 @@ jobs:
         run: npm install --global surge
       
       - name: Deploy to Surge
-        run: surge ./build first-react-app.surge.su ${{ secrets.SURGE_TOKEN }}
+        run: surge ./build firstreactapp.surge.su ${{ secrets.SURGE_TOKEN }}
         
       # Runs a single command using the runners shell
       - name: Run a one-line script
